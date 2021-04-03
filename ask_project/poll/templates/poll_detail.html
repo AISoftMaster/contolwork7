@@ -14,4 +14,5 @@ Poll
 </ul>
 <h2><a href="{% url 'poll_update' poll.pk %}">Update question</a></h2>
     <h2><a href="{% url 'poll_delete' poll.pk %}">Delete question</a></h2>
+    <h2><a href="{% url 'choice_create' poll.pk %}">Create choice</a></h2>
 {% endblock content %}

@@ -40,11 +40,19 @@
   }
 },
 {
-  "model": "poll.choice",
-  "pk": 1,
+  "model": "poll.poll",
+  "pk": 8,
   "fields": {
-    "answer": "it is best",
-    "asking": 1
+    "question": "asdfsadf adsf",
+    "dateTime": "2021-04-03T09:37:39.907Z"
+  }
+},
+{
+  "model": "poll.poll",
+  "pk": 9,
+  "fields": {
+    "question": "asdfsadf sa sdfa sdaf",
+    "dateTime": "2021-04-03T09:37:46.887Z"
   }
 },
 {
@@ -61,6 +69,22 @@
   "fields": {
     "answer": "I want to going to?",
     "asking": 1
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 4,
+  "fields": {
+    "answer": "dsf asddfs",
+    "asking": 1
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 10,
+  "fields": {
+    "answer": "sdfgsdg r",
+    "asking": 5
   }
 },
 {
