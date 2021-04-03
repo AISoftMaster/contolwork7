@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Poll
+{% endblock title %}
+{% block content %}
+    <h1>List view</h1>
+<ul>
+{% for poll in polls %}
+    <li>{{ poll.question }} : {{ poll.dateTime }}</li>
+{% empty %}
+    <li>No question yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
