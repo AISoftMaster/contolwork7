@@ -1,5 +1,6 @@
-from django.shortcuts import redirect, reverse
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.shortcuts import redirect
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Poll
 from .forms import PollForm
 
@@ -37,3 +38,10 @@ class PollUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse('poll_detail', kwargs={'pk': self.object.pk})
+
+
+class PollDelete(DeleteView):
+    model = Poll
+    template_name = 'poll_delete.html'
+    context_object_name = 'poll'
+    success_url = reverse_lazy('poll_list')
