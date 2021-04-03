@@ -7,7 +7,7 @@ Poll
 <h1>{{poll.question}}</h1>
 <ul>
 {% for ask in poll.ask_poll.all %}
-    <li>{{ ask.answer }}</li>
+    <li>{{ ask.answer }}<a href="{% url 'choice_delete' poll.pk ask.pk %}">Delete choice</a></li>
 {% empty %}
     <li>No answer yet.</li>
 {% endfor %}
