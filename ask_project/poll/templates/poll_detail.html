@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+Poll
+{% endblock title %}
+{% block content %}
+<h1>Poll detail view html</h1>
+{{poll.name}}
+<ul>
+{% for ask in poll.ask_poll.all %}
+    <li>{{ ask.answer }}</li>
+{% empty %}
+    <li>No answer yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

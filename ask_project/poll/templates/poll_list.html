@@ -6,7 +6,7 @@ Poll
     <h1>List view</h1>
 <ul>
 {% for poll in polls %}
-    <li>{{ poll.question }} : {{ poll.dateTime }}</li>
+    <li><a href="{% url 'poll_detail' poll.pk %}">{{ poll.question }} : {{ poll.dateTime }}</a></li>
 {% empty %}
     <li>No question yet.</li>
 {% endfor %}

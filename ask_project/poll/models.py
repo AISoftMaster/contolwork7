@@ -13,7 +13,7 @@ class Poll(models.Model):
 
 class Choice(models.Model):
     answer = models.CharField(max_length=100, blank=False)
-    asking = models.ForeignKey('poll.Poll', on_delete=models.CASCADE)
+    asking = models.ForeignKey('poll.Poll', related_name='ask_poll', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.answer
