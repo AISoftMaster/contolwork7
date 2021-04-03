@@ -13,4 +13,9 @@ Poll
 </ul>
 
     <h3><a href="{% url 'poll_create' %}">Create question</a></h3>
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
 {% endblock content %}
