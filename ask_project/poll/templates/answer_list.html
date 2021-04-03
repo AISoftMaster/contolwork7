@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Poll
+{% endblock title %}
+{% block content %}
+    <h1>Answer list</h1>
+<ul>
+{% for poll in answers.poll.all %}
+    <li>
+
+            {{ poll.question }} : {{ poll.dateTime }}
+
+    </li>
+{% empty %}
+    <li>No question yet.</li>
+{% endfor %}
+</ul>
+
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
+{% endblock content %}

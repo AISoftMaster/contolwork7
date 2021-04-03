@@ -120,6 +120,14 @@
   }
 },
 {
+  "model": "poll.choice",
+  "pk": 20,
+  "fields": {
+    "answer": "sfgh hg fhdf",
+    "asking": 2
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {

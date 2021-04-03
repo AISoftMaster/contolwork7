@@ -19,3 +19,7 @@ class Choice(models.Model):
         return self.answer
 
 
+class Answer(models.Model):
+    poll = models.ForeignKey('poll.Poll', related_name='answer_poll', on_delete=models.CASCADE)
+    datetime = models.DateTimeField(auto_now_add=True)
+    choice = models.ForeignKey('poll.Choice', related_name='answer_choice', on_delete=models.CASCADE)

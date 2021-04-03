@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Poll, Choice
+from .models import Poll, Choice, Answer
 from .forms import PollForm, ChoiceForm
 
 # Create your views here.
@@ -82,3 +82,10 @@ class ChoiceUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse('poll_detail', kwargs={'pk': self.object.asking.pk})
+
+
+class AnswerListView(ListView):
+    template_name = 'answer_list.html'
+    context_object_name = 'answers'
+    model = Answer
+    paginate_by = 10
