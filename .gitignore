@@ -2,3 +2,11 @@ venv/
 .idea/
 ask_project/db.sqlite3
 db.sqlite3
+ask_project/poll/__pycache__/urls.cpython-36.pyc
+ask_project/poll/__pycache__/views.cpython-36.pyc
+ask_project/poll/migrations/__pycache__/
+
+ask_project/db.sqlite3
+ask_project/poll/__pycache__/admin.cpython-36.pyc
+ask_project/poll/__pycache__/models.cpython-36.pyc
+
