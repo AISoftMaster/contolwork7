@@ -72,3 +72,13 @@ class ChoiceCreate(CreateView):
         form.save_m2m()
         return redirect('poll_detail', pk=poll.pk)
 
+
+class ChoiceUpdate(UpdateView):
+    model = Choice
+    template_name = 'poll_form.html'
+    form_class = ChoiceForm
+    context_object_name = 'choice'
+    pk_url_kwarg = 'pk2'
+
+    def get_success_url(self):
+        return reverse('poll_detail', kwargs={'pk': self.object.asking.pk})

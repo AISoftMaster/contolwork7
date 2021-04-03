@@ -73,18 +73,50 @@
 },
 {
   "model": "poll.choice",
-  "pk": 4,
+  "pk": 10,
   "fields": {
-    "answer": "dsf asddfs",
+    "answer": "sdfgsdg r",
+    "asking": 5
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 12,
+  "fields": {
+    "answer": "sdfsd gdfgs df",
+    "asking": 5
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 14,
+  "fields": {
+    "answer": "fdgsdfg",
+    "asking": 9
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 16,
+  "fields": {
+    "answer": "Ok very good!",
     "asking": 1
   }
 },
 {
   "model": "poll.choice",
-  "pk": 10,
+  "pk": 17,
   "fields": {
-    "answer": "sdfgsdg r",
-    "asking": 5
+    "answer": "better choice",
+    "asking": 1
+  }
+},
+{
+  "model": "poll.choice",
+  "pk": 18,
+  "fields": {
+    "answer": "fsdgsdsdf gsd",
+    "asking": 2
   }
 },
 {
