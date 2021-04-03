@@ -1,5 +1,5 @@
-from django.shortcuts import redirect
-from django.views.generic import ListView, DetailView, CreateView
+from django.shortcuts import redirect, reverse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Poll
 from .forms import PollForm
 
@@ -27,3 +27,13 @@ class PollCreate(CreateView):
         poll = form.save(commit=False)
         poll.save()
         return redirect('poll_list')
+
+
+class PollUpdate(UpdateView):
+    model = Poll
+    template_name = 'poll_form.html'
+    form_class = PollForm
+    context_key = 'poll'
+
+    def get_success_url(self):
+        return reverse('poll_detail', kwargs={'pk': self.object.pk})
